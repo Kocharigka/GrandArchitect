@@ -12,6 +12,7 @@ public class CountAnswer : MonoBehaviour
     public Text kTextFormula;
     public Text sTextFormula;
     public Text answerField;
+    public Button checkButton;
 
     // Start is called before the first frame update
     public void GetAnswer()
@@ -28,10 +29,13 @@ public class CountAnswer : MonoBehaviour
                 l = new string(' ', len);
             }            
             answerField.text= "Ответ:"+Mathf.Round(answer)+l+"ед2.";
+            checkButton.interactable = true;           
         }
         else
         {
             answerField.text = "Ответ:______ед2.";
+            checkButton.interactable = false;
         }
+
     }
 }
