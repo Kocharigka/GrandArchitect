@@ -34,6 +34,7 @@ public class SpawnPoints : MonoBehaviour
                 float y = Random.Range(minY, maxY);
                 Vector3 location = new Vector3(x, y, 0);
                 var point = Instantiate(toSpawn, location, Quaternion.identity, pointParent);
+                point.GetComponent<SpriteRenderer>().sortingOrder = 3;
                 RaycastHit2D hitUp = Physics2D.Raycast(point.transform.position, Vector2.left, layer);
                 RaycastHit2D hitDown = Physics2D.Raycast(point.transform.position, Vector2.right, layer);
                 if (hitUp.collider != null && hitDown.collider != null)
