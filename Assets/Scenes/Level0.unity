@@ -363,6 +363,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 94881779}
   m_CullTransparentMesh: 1
+--- !u!114 &101726955 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7486327708817023754, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+  m_PrefabInstance: {fileID: 2480112094089616779}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &114480627
 GameObject:
   m_ObjectHideFlags: 0
@@ -967,7 +978,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\u041E\u0442\u0432\u0435\u0442:______\u0435\u04342."
+  m_Text: "\u041E\u0442\u0432\u0435\u0442:______\u0435\u04342"
 --- !u!222 &342394563
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1341,6 +1352,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1504181749}
+  maxPoints: 5000
+  currentPoints: {fileID: 538334944}
+  square: 4000
+  answer: {fileID: 342394562}
+  setCurrency: {fileID: 101726955}
+  setPoints: {fileID: 1669510274}
 --- !u!1 &538334942
 GameObject:
   m_ObjectHideFlags: 0
@@ -4098,6 +4115,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1656545162}
   m_CullTransparentMesh: 1
+--- !u!114 &1669510274 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3268330081790734180, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+  m_PrefabInstance: {fileID: 2480112094089616779}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1802035881
 GameObject:
   m_ObjectHideFlags: 0

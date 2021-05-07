@@ -23,8 +23,7 @@ public class SpawnPoints : MonoBehaviour
         float minY = rend.bounds.center.y - rend.bounds.extents.y;
         float maxY = rend.bounds.center.y + rend.bounds.extents.y;
         LayerMask layer = 6;
-        int insideCount = 0;
-        Debug.Log(z[0]);
+        int insideCount = 0;       
         if (int.Parse(z[0]) > 0)
         {
 
