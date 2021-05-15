@@ -22,7 +22,7 @@ public class SpawnPoints : MonoBehaviour
         float maxX = rend.bounds.center.x + rend.bounds.extents.x;
         float minY = rend.bounds.center.y - rend.bounds.extents.y;
         float maxY = rend.bounds.center.y + rend.bounds.extents.y;
-        LayerMask layer = 6;
+        int  layer = ~(LayerMask.GetMask("Figure"));
         int insideCount = 0;       
         if (int.Parse(z[0]) > 0)
         {
@@ -34,9 +34,19 @@ public class SpawnPoints : MonoBehaviour
                 Vector3 location = new Vector3(x, y, 0);
                 var point = Instantiate(toSpawn, location, Quaternion.identity, pointParent);
                 point.GetComponent<SpriteRenderer>().sortingOrder = 3;
-                RaycastHit2D hitUp = Physics2D.Raycast(point.transform.position, Vector2.left, layer);
-                RaycastHit2D hitDown = Physics2D.Raycast(point.transform.position, Vector2.right, layer);
-                if (hitUp.collider != null && hitDown.collider != null)
+                Debug.Log(layer);
+                var result1 = new RaycastHit2D[1];
+                var result2 = new RaycastHit2D[1];
+                var a = new ContactFilter2D();
+                a.minDepth = 10f;
+                a.maxDepth = 10f;                
+                
+                a.layerMask = 6;
+                int hitUp = Physics2D.Raycast(point.transform.position, Vector2.left,a,result1,Mathf.Infinity);
+                int hitDown = Physics2D.Raycast(point.transform.position, Vector2.right, a, result2, Mathf.Infinity);
+                Debug.Log(result1[0].collider);
+                Debug.Log(result2[0].collider);
+                if (result1[0].collider != null && result2[0].collider != null)
                     insideCount += 1;
 
             }
