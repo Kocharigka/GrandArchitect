@@ -9,7 +9,7 @@ public class DrawScript : MonoBehaviour
     public GameObject lr;    
     private Transform initPoint;
     private LineController adr;
-    public GameObject drawPointsParent;
+    public GameObject drawPointsParent;   
 
     private void Start()
     {
