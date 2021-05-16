@@ -470,7 +470,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Level1Scarab
+          m_StringArgument: Level2Scarab
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &177717556
@@ -3912,7 +3912,7 @@ MonoBehaviour:
   canvas: {fileID: 2029277625}
   maxPoints: 3000
   currentPoints: {fileID: 1953163056}
-  square: 1200
+  square: 900
   answer: {fileID: 1687918819}
   setCurrency: {fileID: 2029277624}
   setPoints: {fileID: 2029277622}
@@ -4764,7 +4764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level1Scarab
+      value: Level2Scarab
       objectReference: {fileID: 0}
     - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
