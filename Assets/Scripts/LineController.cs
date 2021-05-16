@@ -6,35 +6,65 @@ public class LineController : MonoBehaviour
 {
     private LineRenderer lr;
     public List<Transform> points;
-    private Transform ch;
+    public bool inAction=false;
+    private Transform actionPoint;
+    private Vector3 mousePos;
+    private int pointCount=0;
+    public Transform inputParent;
+
+    
     // Start is called before the first frame update
     private void Awake()
     {
-        lr = GetComponent<LineRenderer>();
-        lr.positionCount = 0;                
-        points = new List<Transform>();
+        lr = GetComponent<LineRenderer>();                   
+        points = new List<Transform>();        
+        mousePos = new Vector3(0, 0, 0);
     }
-
-    public void AddPoint(Transform point)
-    {       
-        if (!points.Contains(point))
-        {
-            add(point);
-        }               
-    }
+    
     public void add(Transform point)
     {
-        lr.positionCount++;
-        points.Add(point);    
-
-    }
+        points.Add(null);
+        points[pointCount]=point;
+        pointCount += 1;
+        var allChildren = inputParent.GetComponentInChildren<Transform>();
+        foreach (Transform child in allChildren)
+        {           
+                Destroy(child.gameObject);
+        }
+    }    
     
     private void Update()
     {
-        for(int i =0;i< points.Count; i++)
-        {           
-            lr.SetPosition(i, points[i].position);
+        if (inAction)
+        {
+            var worldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            var currentPos = new Vector3(worldPos.x, worldPos.y, 0);            
+            mousePos = currentPos;
+            var trans = new GameObject();
+            trans.transform.parent = inputParent;
+            trans.transform.position = mousePos;
+            actionPoint = trans.transform;
+            if(pointCount+1>points.Count)
+                points.Add(null);
+            points[pointCount] = actionPoint;
+            setPositions();
+            
+        }       
+    }
+
+   private void setPositions()
+    {
+        if (points[0] !=null)
+        {
+            lr.positionCount = pointCount+1;
+            for (int i = 0; i <= pointCount; i++)
+            {
+                lr.SetPosition(i, points[i].position);
+            }
         }
     }
+
+
+   
 
 }

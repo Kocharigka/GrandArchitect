@@ -16,7 +16,8 @@ public class SpawnDrawPoints : MonoBehaviour
             for (float y = -0.8f; y <= 3.7f; y += 0.4f)
             {
                 var obj = Instantiate(drawPoint);
-                obj.GetComponent<DrawScript>().lr=lr;                
+                obj.GetComponent<DrawScript>().lr=lr;
+                obj.GetComponent<DrawScript>().drawPointsParent =gameObject;
                 obj.transform.parent = transform;
                 obj.transform.position = new Vector3(x, y, 0);
                 obj.transform.localScale = new Vector3(0.02f, 0.02f, 0);
