@@ -22,13 +22,16 @@ public class CheckButtonScript : MonoBehaviour
     public void setCurrentText() 
     {
         int spentPoints =maxPoints-int.Parse(currentPoints.text);
-        setPoints.text = "Использовано песка: "+spentPoints.ToString()+"/8000";
-        float ans = float.Parse(answer.text.Replace("Ответ:", "").Replace("ед2", "").Trim());
-        Debug.Log(ans);
-        Debug.Log(Mathf.Abs(ans - square));
-        float percents =100-Mathf.Round(Mathf.Abs(ans-square)/square*100);        
+        setPoints.text = "Использовано песка: "+spentPoints.ToString()+"/8000";        
+        float percents = getAnswer();  
         setCurrency.text = "ТОЧНОСТЬ ВЫЧИСЛЕНИЙ "+percents.ToString()+"%";
 
+    }
+
+    public float getAnswer()
+    {
+        float ans = float.Parse(answer.text.Replace("Ответ:", "").Replace("ед2", "").Trim());
+        return 100 - Mathf.Round(Mathf.Abs(ans - square) / square * 100);
     }
 
 }

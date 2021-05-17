@@ -11,9 +11,9 @@ public class SpawnDrawPoints : MonoBehaviour
     {
        
 
-        for (float x = -3.7f; x <= 2.8f; x += 0.4f)
+        for (float x = -3.5f; x <= 3f; x += 0.4f)
         {
-            for (float y = -0.8f; y <= 3.7f; y += 0.4f)
+            for (float y = -1.5f; y <= 3f; y += 0.4f)
             {
                 var obj = Instantiate(drawPoint);
                 obj.GetComponent<DrawScript>().lr=lr;
