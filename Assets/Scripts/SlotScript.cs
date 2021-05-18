@@ -5,8 +5,11 @@ using UnityEngine.EventSystems;
 
 public class SlotScript : MonoBehaviour, IDropHandler
 {
+    public List<GameObject> targets;
     public void OnDrop(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+
+        if (eventData.pointerDrag != null && targets.Contains(eventData.pointerDrag))
+            eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;
     }
 }

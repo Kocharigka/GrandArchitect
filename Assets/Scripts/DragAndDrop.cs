@@ -3,30 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler, IDropHandler
+public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
-    public void OnBeginDrag(PointerEventData eventData)
+    private RectTransform rectTransform;
+    public Canvas canvas;
+    private CanvasGroup canvasGroup;   
+    void Awake()
     {
-        throw new System.NotImplementedException();
+        rectTransform = GetComponent<RectTransform>();
+        canvasGroup = GetComponent<CanvasGroup>();
+        
+    }
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {     
+         
+       canvasGroup.blocksRaycasts = false;
+       canvasGroup.alpha = .6f;
     }
 
     public void OnDrag(PointerEventData eventData)
-    {
-        throw new System.NotImplementedException();
-    }
-
-    public void OnDrop(PointerEventData eventData)
-    {
-        throw new System.NotImplementedException();
-    }
+    {    
+            rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;       
+    }    
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+        canvasGroup.blocksRaycasts = true;
+        canvasGroup.alpha = 1f;
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        throw new System.NotImplementedException();
+       
     }
 }
