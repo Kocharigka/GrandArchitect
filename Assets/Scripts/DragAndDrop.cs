@@ -7,19 +7,25 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
 {
     private RectTransform rectTransform;
     public Canvas canvas;
-    private CanvasGroup canvasGroup;   
+    private CanvasGroup canvasGroup;
+    public GameObject slot;
+    private SlotScript slotScript;
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
+        slotScript = slot.GetComponent<SlotScript>();
         
     }
 
     public void OnBeginDrag(PointerEventData eventData)
-    {     
+    {    
          
        canvasGroup.blocksRaycasts = false;
        canvasGroup.alpha = .6f;
+       slotScript.isInCurrent(gameObject);      
+
+        
     }
 
     public void OnDrag(PointerEventData eventData)
