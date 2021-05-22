@@ -830,7 +830,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "/16000\n\u041F\u0415\u0421\u041E\u041A"
+  m_Text: "/5000\n\u041F\u0415\u0421\u041E\u041A"
 --- !u!222 &173117563
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1308,6 +1308,53 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 352899624}
   m_CullTransparentMesh: 1
+--- !u!1 &368795545
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 368795547}
+  - component: {fileID: 368795546}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &368795546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368795545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 823d55bbede3c584f89f4af4c0b42c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bagText: {fileID: 1020961039}
+  progressBar: {fileID: 1591600474}
+  spentPoints: {fileID: 538334944}
+  answerButton: {fileID: 533505525}
+--- !u!4 &368795547
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 368795545}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 399.5887, y: 200.6529, z: -0.7845497}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &371592011
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,6 +1395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 374379369}
   - component: {fileID: 374379368}
+  - component: {fileID: 374379370}
   m_Layer: 0
   m_Name: GameField
   m_TagString: Untagged
@@ -1423,6 +1471,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &374379370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 374379367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc7db6964ef9e37459d78a47ee0eaffc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &379738567
 GameObject:
   m_ObjectHideFlags: 0
@@ -1538,6 +1598,18 @@ MonoBehaviour:
       - m_Target: {fileID: 342394564}
         m_TargetAssemblyTypeName: CountAnswer, Assembly-CSharp
         m_MethodName: GetAnswer
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 368795546}
+        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
+        m_MethodName: spend
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2945,6 +3017,18 @@ MonoBehaviour:
           m_StringArgument: Tutorial
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 368795546}
+        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
+        m_MethodName: refill
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1019914172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3044,7 +3128,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -17.061981, y: -9.9999695}
+  m_AnchoredPosition: {x: -17.062012, y: -9.9999695}
   m_SizeDelta: {x: 51.7239, y: 30}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1020961039
@@ -3074,13 +3158,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 2
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 16000
+  m_Text: 5000
 --- !u!222 &1020961040
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3869,8 +3953,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 212.91016, y: 37.100006}
-  m_SizeDelta: {x: 20, y: 205.5172}
+  m_AnchoredPosition: {x: 203.9, y: 32.05197}
+  m_SizeDelta: {x: 20, y: 233.9633}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1202932886
 MonoBehaviour:
@@ -4038,8 +4122,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: -266.5, y: -90.9}
-  m_SizeDelta: {x: 293.3828, y: 20}
+  m_AnchoredPosition: {x: -253.52542, y: -94.434}
+  m_SizeDelta: {x: 322.5774, y: 20}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1277529634
 MonoBehaviour:
@@ -5384,18 +5468,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 204541871}
     - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 368795546}
+    - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
@@ -5403,15 +5499,31 @@ PrefabInstance:
       value: loadLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: refill
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: LoadLevelByName, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: TutorialManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Tutorial
       objectReference: {fileID: 0}
     - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents: []

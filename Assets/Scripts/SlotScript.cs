@@ -11,6 +11,7 @@ public class SlotScript : MonoBehaviour, IDropHandler
     public List<GameObject> checkObj;
     public Image formulaMake;
     public Image formula;
+    public Text answer;
     void Awake()
     {
         current = new List<GameObject>();
@@ -46,6 +47,7 @@ public class SlotScript : MonoBehaviour, IDropHandler
             Debug.Log("OK");
             formulaMake.gameObject.SetActive(false);
             formula.gameObject.SetActive(true);
+            answer.gameObject.SetActive(true);
             gameObject.SetActive(false);
         }
         
