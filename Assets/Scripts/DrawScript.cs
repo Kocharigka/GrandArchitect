@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class DrawScript : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class DrawScript : MonoBehaviour
     public GameObject lr;    
     private Transform initPoint;
     private LineController adr;
-    public GameObject drawPointsParent;   
+    public GameObject drawPointsParent;
+    
 
     private void Start()
     {
@@ -33,7 +35,12 @@ public class DrawScript : MonoBehaviour
             }
         }
         if (adr.points.Count == 0)
-        {           
+        {
+            var obj=GameObject.Find("DotsTip");
+            if(obj!= null)
+            {
+                obj.SetActive(false);
+            }
             initPoint = transform;
             adr.add(initPoint);           
             adr.inAction = true;
@@ -56,6 +63,10 @@ public class DrawScript : MonoBehaviour
         lr.AddComponent<EdgeCollider2D>();
         lr.GetComponent<EdgeCollider2D>().points = points.ToArray();
         var allChildren = drawPointsParent.GetComponentInChildren<Transform>();
+        if (adr.FormulaTip!=null)        
+        {
+            adr.FormulaTip.SetActive(true);
+        }
         foreach (Transform child in allChildren)
         {           
                 Destroy(child.gameObject);

@@ -10,7 +10,7 @@ public class ResizeField : MonoBehaviour
     public Slider leftSlider;
     public Slider botomSlider;
     public Text textField;
-    public GameObject figure;
+    public GameObject figure;    
 
 
     // Start is called before the first frame update
@@ -33,6 +33,7 @@ public class ResizeField : MonoBehaviour
 
         }
     }
+    
 
 
 }

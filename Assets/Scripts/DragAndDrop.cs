@@ -19,8 +19,12 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     }
 
     public void OnBeginDrag(PointerEventData eventData)
-    {    
-         
+    {
+        var obj = GameObject.Find("FormulaTip");
+        if (obj != null)
+        {
+            obj.SetActive(false);
+        }
        canvasGroup.blocksRaycasts = false;
        canvasGroup.alpha = .6f;
        slotScript.isInCurrent(gameObject);      

@@ -17,7 +17,7 @@ public class CountAnswer : MonoBehaviour
     // Start is called before the first frame update
     public void GetAnswer()
     {
-        if (nText.text == nTextFormula.text && kText.text == kTextFormula.text && sText.text == sTextFormula.text)
+        if (nText.text == nTextFormula.text && kText.text == kTextFormula.text && sText.text == sTextFormula.text&&nTextFormula.text!="0")
         {
            
             float answer = float.Parse(kTextFormula.text) / float.Parse(nTextFormula.text) * float.Parse(sTextFormula.text);

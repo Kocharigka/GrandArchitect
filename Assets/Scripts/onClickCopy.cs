@@ -10,7 +10,9 @@ public class onClickCopy : MonoBehaviour
     public GameObject secondButton;
     public void clickToCopy()
     {
-        if(firstButton.GetComponent<Outline>().effectColor != Color.red && secondButton.GetComponent<Outline>().effectColor != Color.red)
+        if (GetComponent<Outline>().effectColor == Color.red)
+            GetComponent<Outline>().effectColor = Color.black;
+        else if (firstButton.GetComponent<Outline>().effectColor != Color.red && secondButton.GetComponent<Outline>().effectColor != Color.red)
             GetComponent<Outline>().effectColor = Color.red;
     }
 

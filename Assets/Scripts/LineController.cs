@@ -11,6 +11,7 @@ public class LineController : MonoBehaviour
     private Vector3 mousePos;
     private int pointCount=0;
     public Transform inputParent;
+    public GameObject FormulaTip = null;
 
     
     // Start is called before the first frame update
