@@ -10,15 +10,23 @@ public class ResizeField : MonoBehaviour
     public Slider leftSlider;
     public Slider botomSlider;
     public Text textField;
-    public GameObject figure;    
+    public GameObject figure;
+    public GameObject sliderTip=null;
+    public GameObject fieldTip = null;
+    public bool active = false;
 
-
-    // Start is called before the first frame update
-
-
-    // Update is called once per frame
     void Update()
     {
+        if ((botomSlider.value != 1 || leftSlider.value != 1) && sliderTip != null)
+        {
+            if (!active)
+            {
+                sliderTip.SetActive(false);
+                fieldTip.SetActive(true);
+                active = true;
+            }
+
+        }
         transform.localScale = new Vector3(botomSlider.value, leftSlider.value, 0);
         transform.localPosition = new Vector3((botomSlider.value - 1) / 2, (leftSlider.value - 1) / 2, 0);
         textField.text = (Mathf.Round((100 * botomSlider.value) * (100 * leftSlider.value))).ToString();
