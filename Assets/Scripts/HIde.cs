@@ -9,8 +9,7 @@ public class HIde : MonoBehaviour
     public GameObject toShowImage;
     // Start is called before the first frame update
    public void hideImage()
-    {
-        Debug.Log("HIDE");
+    {        
         toHideImage.SetActive(false);
     }
     public void showImage()
