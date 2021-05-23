@@ -6,12 +6,13 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-      value: 22424703114646680e0b0227036c681918241b2f222d15332c3b1c31acf53a31f6fe
+      value: 22424703114646680e0b0227036c72111f19352f223d6661633c133af6f9
       flags: 0
     RecentlyUsedScenePath-1:
-      value: 22424703114646680e0b0227036c6c151a121b3e002d30352167083debf42d
+      value: 22424703114646680e0b0227036c681918241b2f222d15332c3b1c31acf53a31f6fe
       flags: 0
     RecentlyUsedScenePath-2:
+<<<<<<< HEAD
       value: 22424703114646680e0b0227036c6c13170519281f2b233e283a521fedf3310be1e238ecd4393e2e3800a1290a371526
       flags: 0
     RecentlyUsedScenePath-3:
@@ -25,12 +26,27 @@ EditorUserSettings:
       flags: 0
     RecentlyUsedScenePath-6:
       value: 22424703114646680e0b0227036c6c13170519281f2b233e283a521fe7f63134b3d435e8f53b3d722c0ce6281d
+=======
+      value: 22424703114646680e0b0227036c6c13170519281f2b233e283a5204ebee073be7e933dae43b2d3d3b42be721130082beb
       flags: 0
-    RecentlyUsedScenePath-7:
+    RecentlyUsedScenePath-3:
       value: 22424703114646680e0b0227036c6c13170519281f2b233e283a521fe7f63134b6d435e8f53b3d722c0ce6281d
       flags: 0
-    RecentlyUsedScenePath-8:
+    RecentlyUsedScenePath-4:
       value: 22424703114646680e0b0227036c6c13170519281f2b233e283a521fe7f63134b1d435e8f53b3d722c0ce6281d
+      flags: 0
+    RecentlyUsedScenePath-5:
+      value: 22424703114646680e0b0227036c6c151a121b3e002d30352167083debf42d
+      flags: 0
+    RecentlyUsedScenePath-6:
+      value: 22424703114646680e0b0227036c6c13170519281f2b233e283a521fedf3310be1e238ecd4393e2e3800a1290a371526
+>>>>>>> origin/vlada1
+      flags: 0
+    RecentlyUsedScenePath-7:
+      value: 22424703114646680e0b0227036c6c13170519281f2b233e283a5204ebee073be7e933dae43b2d3d3b4cfa320d2a18
+      flags: 0
+    RecentlyUsedScenePath-8:
+      value: 22424703114646680e0b0227036c6c13170519281f2b233e283a521fe7f63134b3d435e8f53b3d722c0ce6281d
       flags: 0
     RecentlyUsedScenePath-9:
       value: 22424703114646680e0b0227036c6c13170519281f2b233e283a521fe7f63134b0d435e8f53b3d722c0ce6281d
