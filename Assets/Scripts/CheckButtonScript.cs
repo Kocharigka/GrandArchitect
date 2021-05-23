@@ -22,7 +22,7 @@ public class CheckButtonScript : MonoBehaviour
     public void setCurrentText() 
     {
         int spentPoints =maxPoints-int.Parse(currentPoints.text);
-        setPoints.text = "Использовано песка: "+spentPoints.ToString()+"/8000";        
+        setPoints.text = "Использовано песка: "+spentPoints.ToString();        
         float percents = getAnswer();  
         setCurrency.text = "ТОЧНОСТЬ ВЫЧИСЛЕНИЙ "+percents.ToString()+"%";
 
