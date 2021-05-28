@@ -29,7 +29,12 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("p"))
         {
             progress = 1000;
-        }       
+        }
+        if (Input.GetKeyDown("b"))
+        {
+            currentBag = 100000;
+        }
+
 
         bagText.text = currentBag.ToString();
         progressBar.value = progress;

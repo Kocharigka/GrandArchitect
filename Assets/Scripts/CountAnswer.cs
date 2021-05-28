@@ -16,7 +16,7 @@ public class CountAnswer : MonoBehaviour
 
     // Start is called before the first frame update
     public void GetAnswer()
-    {
+    {        
         if (nText.text == nTextFormula.text && kText.text == kTextFormula.text && sText.text == sTextFormula.text&&nTextFormula.text!="0")
         {
            
@@ -37,5 +37,15 @@ public class CountAnswer : MonoBehaviour
             checkButton.interactable = false;
         }
 
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown("x"))
+        {
+            nTextFormula.text = nText.text;
+            kTextFormula.text = kText.text;
+            sTextFormula.text = sText.text;
+            GetAnswer();
+        }
     }
 }

@@ -6352,7 +6352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canvas: {fileID: 2029277625}
   maxPoints: 3000
-  currentPoints: {fileID: 0}
+  currentPoints: {fileID: 1577607766}
   square: 2200
   answer: {fileID: 1687918819}
   setCurrency: {fileID: 2029277624}

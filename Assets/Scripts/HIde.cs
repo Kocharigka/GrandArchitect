@@ -5,15 +5,17 @@ using UnityEngine.UI;
 
 public class HIde : MonoBehaviour
 {
-    public GameObject toHideImage;
-    public GameObject toShowImage;
+    public GameObject toHideImage=null;
+    public GameObject toShowImage=null;
     // Start is called before the first frame update
    public void hideImage()
     {        
-        toHideImage.SetActive(false);
+        if(toHideImage!=null)
+            toHideImage.SetActive(false);
     }
     public void showImage()
     {
-        toShowImage.SetActive(true);
+        if (toShowImage != null)
+            toShowImage.SetActive(true);
     }
 }
