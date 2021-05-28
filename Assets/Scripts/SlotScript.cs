@@ -33,6 +33,16 @@ public class SlotScript : MonoBehaviour, IDropHandler
         }
         
     }
+    void Update()
+    {
+        if (Input.GetKeyDown("z"))
+        {
+            formulaMake.gameObject.SetActive(false);
+            formula.gameObject.SetActive(true);
+            answer.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+        }
+    }
 
     public void Check()
     {

@@ -31,7 +31,9 @@ public class CheckButtonScript : MonoBehaviour
     public float getAnswer()
     {
         float ans = float.Parse(answer.text.Replace("Ответ:", "").Replace("ед2", "").Trim());
-        return 100 - Mathf.Round(Mathf.Abs(ans - square) / square * 100);
+        var z= 100 - Mathf.Round(Mathf.Abs(ans - square) / square * 100);
+        if (z > 0) return z;
+        else return 0;
     }
 
 }

@@ -1338,6 +1338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 823d55bbede3c584f89f4af4c0b42c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  progress: 0
   bagText: {fileID: 1020961039}
   progressBar: {fileID: 1591600474}
   spentPoints: {fileID: 538334944}
@@ -1824,6 +1825,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 368795546}
+        m_TargetAssemblyTypeName: TutorialManager, Assembly-CSharp
+        m_MethodName: newProgress
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 866105113}
+        m_TargetAssemblyTypeName: TutorialPB, Assembly-CSharp
+        m_MethodName: Increment
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &533505526
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1877,7 +1902,7 @@ MonoBehaviour:
   canvas: {fileID: 1504181749}
   maxPoints: 5000
   currentPoints: {fileID: 538334944}
-  square: 4100
+  square: 2800
   answer: {fileID: 342394562}
   setCurrency: {fileID: 101726955}
   setPoints: {fileID: 1669510274}
@@ -2470,6 +2495,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firstButton: {fileID: 315630657}
   secondButton: {fileID: 1163839908}
+--- !u!1 &866105108 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6011135042652114642, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+  m_PrefabInstance: {fileID: 2480112094089616779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &866105113
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866105108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b74c7598a9fe9746836f27acbd02048, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  newSlider: {fileID: 2480112094089616782}
+  oldSlider: {fileID: 2480112094089616783}
+  gameManager: {fileID: 368795545}
 --- !u!1 &926638003
 GameObject:
   m_ObjectHideFlags: 0
@@ -6003,6 +6048,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7997924384022226341, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7997924384022226341, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+      propertyPath: newSlider
+      value: 
+      objectReference: {fileID: 2480112094089616782}
+    - target: {fileID: 7997924384022226341, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+      propertyPath: oldSlider
+      value: 
+      objectReference: {fileID: 2480112094089616783}
+    - target: {fileID: 7997924384022226341, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 368795545}
     - target: {fileID: 8168802366355321403, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -6080,5 +6141,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1659bbce1cf92634b800e71115de506a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2480112094089616782 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1913047183592208349, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+  m_PrefabInstance: {fileID: 2480112094089616779}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2480112094089616783 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7240715611215901278, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
+  m_PrefabInstance: {fileID: 2480112094089616779}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

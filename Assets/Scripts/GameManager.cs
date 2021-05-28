@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown("p"))
+        {
+            progress = 1000;
+        }       
 
         bagText.text = currentBag.ToString();
         progressBar.value = progress;
@@ -68,6 +72,10 @@ public class GameManager : MonoBehaviour
         else
             SceneManager.LoadScene("LoseSceneScarab");
 
+    }
+    public float setProgr()
+    {
+        return progress;
     }
 
 }

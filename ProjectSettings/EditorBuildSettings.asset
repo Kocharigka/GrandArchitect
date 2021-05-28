@@ -27,9 +27,30 @@ EditorBuildSettings:
     path: Assets/Scenes/ScarabScenes/Levels/Level4Scarab.unity
     guid: ce257638a52ce1843a2c47a4f01f54ca
   - enabled: 1
+    path: Assets/Scenes/ScarabScenes/StoryScenes/Story1.unity
+    guid: 814633b288ff9c742ad94264a33da006
+  - enabled: 1
+    path: Assets/Scenes/ScarabScenes/StoryScenes/Story2.unity
+    guid: 0cc607a292a0db147a9baa235a8d40c4
+  - enabled: 1
+    path: Assets/Scenes/ScarabScenes/StoryScenes/Story3.unity
+    guid: 09a74fa91ccf35a428e6ecc5662cb610
+  - enabled: 1
+    path: Assets/Scenes/ScarabScenes/StoryScenes/Story4.unity
+    guid: ca52aa6fded1605489f2960e959cc1f1
+  - enabled: 1
+    path: Assets/Scenes/ScarabScenes/TeachingScenes/Formula.unity
+    guid: ef6f6e2941a2d44409345b1a0e5ce82c
+  - enabled: 1
     path: Assets/Scenes/ScarabScenes/LoseSceneScarab.unity
-    guid: 9c964205ca86f2240b0d2b0a31e2c4e9
+    guid: f5ca4078b8e0276458fbf5d6f4089144
   - enabled: 1
     path: Assets/Scenes/ScarabScenes/WinSceneScarab.unity
-    guid: a30b2d19be8168a458c32386a33923c3
+    guid: 4d3282f141532c84896007c0ccc086a6
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TutorialManager : MonoBehaviour
 {
     public static int currentBag = 5000;
-    public static float progress = 0;
+    public float progress = 0;
     public Text bagText;
     public Slider progressBar;
     public Text spentPoints;
@@ -56,6 +56,6 @@ public class TutorialManager : MonoBehaviour
     }
     public void newProgress()
     {
-        progress += answerButton.GetComponent<CheckButtonScript>().getAnswer() / 400;
+        progress += answerButton.GetComponent<CheckButtonScript>().getAnswer() / 100;
     }   
 }
