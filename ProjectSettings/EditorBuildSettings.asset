@@ -15,16 +15,16 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: 953dc75f43424ce4b8e16eb2e9267b0c
   - enabled: 1
-    path: Assets/Scenes/ScarabScenes/Level1Scarab.unity
+    path: Assets/Scenes/ScarabScenes/Levels/Level1Scarab.unity
     guid: 7cc992a2de6f20f449ca469a02be86aa
   - enabled: 1
-    path: Assets/Scenes/ScarabScenes/Level2Scarab.unity
+    path: Assets/Scenes/ScarabScenes/Levels/Level2Scarab.unity
     guid: ffa179c40ca97724398bf17e17e6e323
   - enabled: 1
-    path: Assets/Scenes/ScarabScenes/Level3Scarab.unity
+    path: Assets/Scenes/ScarabScenes/Levels/Level3Scarab.unity
     guid: 687037b4d9b46de4c922f404b360322a
   - enabled: 1
-    path: Assets/Scenes/ScarabScenes/Level4Scarab.unity
+    path: Assets/Scenes/ScarabScenes/Levels/Level4Scarab.unity
     guid: ce257638a52ce1843a2c47a4f01f54ca
   - enabled: 1
     path: Assets/Scenes/ScarabScenes/LoseSceneScarab.unity
