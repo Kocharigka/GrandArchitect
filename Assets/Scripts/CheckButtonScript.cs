@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CheckButtonScript : MonoBehaviour
 {
     public Canvas canvas;
-    public int maxPoints;
+    private int maxPoints=5000;
     public Text currentPoints;
     public float square;
     public Text answer;

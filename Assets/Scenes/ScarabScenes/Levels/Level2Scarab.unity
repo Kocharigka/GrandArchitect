@@ -694,7 +694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 536931085}
-  maxPoints: 3000
+  maxPoints: 5000
   currentPoints: {fileID: 1249775425}
   square: 600
   answer: {fileID: 396134210}
