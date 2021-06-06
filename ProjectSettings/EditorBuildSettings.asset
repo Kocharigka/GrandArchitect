@@ -39,7 +39,7 @@ EditorBuildSettings:
     path: Assets/Scenes/ScarabScenes/StoryScenes/Story4.unity
     guid: ca52aa6fded1605489f2960e959cc1f1
   - enabled: 1
-    path: Assets/Scenes/ScarabScenes/TeachingScenes/Formula.unity
+    path: Assets/Scenes/ScarabScenes/StoryScenes/Formula.unity
     guid: ef6f6e2941a2d44409345b1a0e5ce82c
   - enabled: 1
     path: Assets/Scenes/ScarabScenes/LoseSceneScarab.unity
