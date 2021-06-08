@@ -19,10 +19,10 @@ public class SpawnPoints : MonoBehaviour
     public void Spawn()
     {
         string[] z = clickLabel.text.Split('/');
-        float minX = rend.bounds.center.x - rend.bounds.extents.x;
-        float maxX = rend.bounds.center.x + rend.bounds.extents.x;
-        float minY = rend.bounds.center.y - rend.bounds.extents.y;
-        float maxY = rend.bounds.center.y + rend.bounds.extents.y;
+        float minX = rend.bounds.center.x - rend.bounds.extents.x+0.1f;
+        float maxX = rend.bounds.center.x + rend.bounds.extents.x-0.1f;
+        float minY = rend.bounds.center.y - rend.bounds.extents.y+ 0.1f;
+        float maxY = rend.bounds.center.y + rend.bounds.extents.y- 0.1f;
         LayerMask layer = 6;
         int insideCount = 0;
         if (int.Parse(z[0]) > 0)

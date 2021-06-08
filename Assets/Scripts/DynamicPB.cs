@@ -27,4 +27,11 @@ public class DynamicPB : MonoBehaviour
         oldSlider.value = a;
         progress = a;
     }
+    public void Decrement()
+    {
+        var a = gameManager.GetComponent<GameManager>().getProgr();
+        oldSlider.value -= a;
+        newSlider.value = oldSlider.value;
+        progress -= a;
+    }
 }

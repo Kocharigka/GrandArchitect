@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public static int currentBag=16000;
-    public static float progress=0;
+    public static int currentBag = 16000;
+    public static float progress = 0;
     public Text bagText;
     public Slider progressBar;
     public Text spentPoints;
@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
         currentPoints = int.Parse(spentPoints.text);
         bagText.text = currentBag.ToString();
         maxPoints = currentPoints;
-       
+
     }
 
     private void Update()
@@ -66,13 +66,18 @@ public class GameManager : MonoBehaviour
     }
     public void newProgress()
     {
-        progress+=answerButton.GetComponent<CheckButtonScript>().getAnswer()/400;
+        progress += getProgr();
+    }
+
+    public float getProgr()
+    {
+        return answerButton.GetComponent<CheckButtonScript>().getAnswer() / 400;
     }
 
 
     public void winOrLose()
     {
-        if(progress>0.9)
+        if (progress > 0.9)
             SceneManager.LoadScene("WinSceneScarab");
         else
             SceneManager.LoadScene("LoseSceneScarab");
@@ -81,6 +86,11 @@ public class GameManager : MonoBehaviour
     public float setProgr()
     {
         return progress;
+    }
+
+    public void removeProgr()
+    {
+        progress -= getProgr();
     }
 
 }

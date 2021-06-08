@@ -13,7 +13,7 @@ public class ResizeField : MonoBehaviour
     public GameObject figure=null;
     public GameObject sliderTip=null;
     public GameObject fieldTip = null;
-    public bool active = false;
+    private bool active = false;
 
     void Update()
     {
@@ -27,7 +27,7 @@ public class ResizeField : MonoBehaviour
             }
 
         }
-        transform.localScale = new Vector3(botomSlider.value, leftSlider.value, 0);
+        transform.localScale = new Vector3(botomSlider.value*0.423f, leftSlider.value*0.6f, 0);
         transform.localPosition = new Vector3((botomSlider.value - 1) / 2, (leftSlider.value - 1) / 2, 0);
         textField.text = (Mathf.Round((100 * botomSlider.value) * (100 * leftSlider.value))).ToString();
         if (Input.GetKeyDown("space")&&figure!=null)
