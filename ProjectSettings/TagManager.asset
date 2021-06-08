@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - Figure
-  - 
+  - Field
   - 
   - 
   - 
@@ -41,6 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Figure
+  - name: Background
     uniqueID: 4057141623
+    locked: 0
+  - name: Figure
+    uniqueID: 3003499065
     locked: 0
