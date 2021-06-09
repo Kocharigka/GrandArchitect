@@ -11,10 +11,10 @@ public class SlotScript : MonoBehaviour, IDropHandler
     public List<GameObject> checkObj;
     public Image formulaMake;
     public Image formula;
-    public Text answer;
+    public Text answer;   
     void Awake()
     {
-        current = new List<GameObject>();
+        current = new List<GameObject>();       
 }
     public void OnDrop(PointerEventData eventData)
     {
@@ -23,16 +23,21 @@ public class SlotScript : MonoBehaviour, IDropHandler
         {
             current.Add(eventData.pointerDrag);
             eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = GetComponent<RectTransform>().anchoredPosition;           
-        }
+        }        
     }
     public void isInCurrent(GameObject obj)
     {
         if (current.Contains(obj))
         {
             current.Remove(obj);
-        }
-        
+        }        
     }
+    public bool inCur(GameObject obj)
+    {
+        return current.Contains(obj);       
+    }
+
+
     void Update()
     {
         if (Input.GetKeyDown("z"))

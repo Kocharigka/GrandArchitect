@@ -10,12 +10,13 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     private CanvasGroup canvasGroup;
     public GameObject slot;
     private SlotScript slotScript;
+    private Vector2 currentPos;
     void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         slotScript = slot.GetComponent<SlotScript>();
-        
+        currentPos = rectTransform.anchoredPosition;        
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -40,11 +41,18 @@ public class DragAndDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler
     public void OnEndDrag(PointerEventData eventData)
     {
         canvasGroup.blocksRaycasts = true;
-        canvasGroup.alpha = 1f;
+        canvasGroup.alpha = 1f;      
+        if (!slotScript.inCur(gameObject))
+        {
+            Debug.Log(slotScript.inCur(gameObject));
+            rectTransform.anchoredPosition = currentPos;
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
        
     }
+
+  
 }

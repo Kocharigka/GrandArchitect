@@ -8,19 +8,28 @@ public class GameManager : MonoBehaviour
 {
     public static int currentBag = 16000;
     public static float progress = 0;
-    public Text bagText;
+    public Text bagText=null;
     public Slider progressBar;
-    public Text spentPoints;
-    private int currentPoints;
-    private int maxPoints;
+    public Text spentPoints=null;
+    private int currentPoints=0;
+    private int maxPoints=0;
     private bool zero = false;
-    public Button answerButton;
+    public Button answerButton=null;
 
     private void Start()
     {
-        currentPoints = int.Parse(spentPoints.text);
-        bagText.text = currentBag.ToString();
+        if(spentPoints!=null)
+        {
+            currentPoints = int.Parse(spentPoints.text);
+        }
+
+        if (bagText != null)
+        {
+            bagText.text = currentBag.ToString();
+        }
+
         maxPoints = currentPoints;
+        progressBar.value = progress;
 
     }
 
@@ -33,11 +42,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("b"))
         {
             currentBag = 100000;
-        }
-
-
-        bagText.text = currentBag.ToString();
-        progressBar.value = progress;
+        }       
     }
     public void spend()
     {
