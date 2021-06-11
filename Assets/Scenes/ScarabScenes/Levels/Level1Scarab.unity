@@ -835,6 +835,7 @@ GameObject:
   - component: {fileID: 1652495367}
   - component: {fileID: 1652495369}
   - component: {fileID: 1652495368}
+  - component: {fileID: 1652495370}
   m_Layer: 5
   m_Name: TipImage
   m_TagString: Untagged
@@ -901,6 +902,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652495366}
   m_CullTransparentMesh: 1
+--- !u!114 &1652495370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652495366}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e658e0c782101c4d8519f7b392d4bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &1657052564 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1286012590972887852, guid: fda3804decb1d7f458ee2f732ccb5268, type: 3}

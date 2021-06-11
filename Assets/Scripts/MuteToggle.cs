@@ -17,6 +17,7 @@ public class MuteToggle : MonoBehaviour
 		{
 			myToggle.isOn = false;
 		}
+		PlayerPrefs.SetInt("tipsOn", 0);
     }
 
 	public void ToggleAudioOnValueChange(bool audioIn)
@@ -30,4 +31,17 @@ public class MuteToggle : MonoBehaviour
 			AudioListener.volume = 0;
 		}
 	}
+	public void ToggleTips()
+    {
+        if (PlayerPrefs.HasKey("tipsOn"))
+        {
+			PlayerPrefs.DeleteKey("tipsOn");
+			PlayerPrefs.Save();
+        }
+        else
+        {
+			PlayerPrefs.SetInt("tipsOn", 0);
+			PlayerPrefs.Save();
+		}
+    }
 }

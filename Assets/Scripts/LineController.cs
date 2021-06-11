@@ -12,6 +12,7 @@ public class LineController : MonoBehaviour
     private int pointCount=0;
     public Transform inputParent;
     public GameObject FormulaTip = null;
+    //tip4
 
     
     // Start is called before the first frame update
@@ -48,8 +49,7 @@ public class LineController : MonoBehaviour
             if(pointCount+1>points.Count)
                 points.Add(null);
             points[pointCount] = actionPoint;
-            setPositions();
-            
+            setPositions();            
         }       
     }
 
@@ -64,8 +64,4 @@ public class LineController : MonoBehaviour
             }
         }
     }
-
-
-   
-
 }

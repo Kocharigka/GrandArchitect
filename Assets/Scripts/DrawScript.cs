@@ -36,10 +36,11 @@ public class DrawScript : MonoBehaviour
         }
         if (adr.points.Count == 0)
         {
-            var obj=GameObject.Find("DotsTip");
+            var obj=GameObject.Find("StartDrawTip");
             if(obj!= null)
             {
                 obj.SetActive(false);
+                //adr.starttip4
             }
             initPoint = transform;
             adr.add(initPoint);           
@@ -65,6 +66,7 @@ public class DrawScript : MonoBehaviour
         var allChildren = drawPointsParent.GetComponentInChildren<Transform>();
         if (adr.FormulaTip!=null)        
         {
+            //end tip 4
             adr.FormulaTip.SetActive(true);
         }
         foreach (Transform child in allChildren)
