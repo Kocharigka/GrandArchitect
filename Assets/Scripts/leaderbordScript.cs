@@ -13,6 +13,8 @@ public class leaderbordScript : MonoBehaviour
     private Dictionary<string, int> players;
     public GameObject gmobj;
     private GameManager gm;
+    private string nick;
+    public Image highlight;
     // Start is called before the first frame update
     private void Awake()
     {
@@ -30,7 +32,8 @@ public class leaderbordScript : MonoBehaviour
     {
         if (players.ContainsKey(gm.getNick()))
             players.Remove(gm.getNick());
-        players.Add(gm.getNick(), gm.getRes());
+        nick = gm.getNick();
+        players.Add(nick, gm.getRes());       
         var ordered = players.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
         var ordKeys = ordered.Keys.ToList();
         var ordValues = ordered.Values.ToList();
@@ -41,14 +44,14 @@ public class leaderbordScript : MonoBehaviour
 
         for (int i = 0; i < plases.Count; i++)
         {
-            
             var space = "          ";
-            
-            if (i == 2) 
-            {
-               space= "                 ";
+            if (ordKeys[i] == nick)
+            { 
+                space = "                 ";
+                highlight.rectTransform.position = new Vector3(highlight.rectTransform.position.x, 
+                    plases[i].rectTransform.position.y, 0);
+                plases[i].fontSize = 20;
             }
-
             plases[i].text = (i+1)+"     "+ordKeys[i]+space+ordValues[i]+"   Î×ÊÈ";
         }
     }
