@@ -9,12 +9,13 @@ public class GameManager : MonoBehaviour
     public static int currentBag = 16000;
     public static float progress = 0;
     public Text bagText=null;
-    public Slider progressBar;
+    public Slider progressBar=null;
     public Text spentPoints=null;
     private int currentPoints=0;
     private int maxPoints=0;
     private bool zero = false;
     public Button answerButton=null;
+    public static Dictionary<string, float> progr=new Dictionary<string, float>();
 
     private void Start()
     {
@@ -29,12 +30,15 @@ public class GameManager : MonoBehaviour
         }
 
         maxPoints = currentPoints;
+        if (progress < 0) progress = 0;
         progressBar.value = progress;
+     
 
     }
 
     private void Update()
     {
+       // Debug.Log(currentBag);
         if (Input.GetKeyDown("p"))
         {
             progress = 1000;
@@ -42,7 +46,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("b"))
         {
             currentBag = 100000;
-        }       
+        }               
     }
     public void spend()
     {
@@ -80,14 +84,7 @@ public class GameManager : MonoBehaviour
     }
 
 
-    public void winOrLose()
-    {
-        if (progress > 0.9)
-            SceneManager.LoadScene("WinSceneScarab");
-        else
-            SceneManager.LoadScene("LoseSceneScarab");
-
-    }
+   
     public float setProgr()
     {
         return progress;
@@ -96,6 +93,41 @@ public class GameManager : MonoBehaviour
     public void removeProgr()
     {
         progress -= getProgr();
+    }
+    public void rmProgr(float progr,int sand)
+    {
+        progress -= progr;
+        currentBag += sand;
+    }
+    public void rmKey(string key)
+    {
+        progr.Remove(key);
+    }
+    
+    public void SaveProgr()
+    {
+       var sName=SceneManager.GetActiveScene().name;
+        var persName = "persLVL" + sName[5];
+        var sandName = "sandLVL" + sName[5];
+        Debug.Log(persName);
+        Debug.Log(sandName);
+        Debug.Log(sName[5]);
+        if (progr.ContainsKey(persName))
+        {
+            progr.Remove(persName);
+        }
+        progr.Add(persName,Mathf.Round(getProgr()*100));
+        if (progr.ContainsKey(sandName))
+        {
+            progr.Remove(sandName);
+        }
+        progr.Add(sandName, maxPoints - currentPoints);
+        Debug.Log(progr.Count);
+    }
+
+    public Dictionary<string,float> loadProgr()
+    {
+        return progr;
     }
 
 }

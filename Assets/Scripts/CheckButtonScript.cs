@@ -32,6 +32,7 @@ public class CheckButtonScript : MonoBehaviour
     {
         float ans = float.Parse(answer.text.Replace("Ответ:", "").Replace("ед2", "").Trim());
         var z= 100 - Mathf.Round(Mathf.Abs(ans - square) / square * 100);
+        Debug.Log(z);
         if (z > 0) return z;
         else return 0;
     }

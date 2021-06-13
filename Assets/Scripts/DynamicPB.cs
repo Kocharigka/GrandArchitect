@@ -12,7 +12,9 @@ public class DynamicPB : MonoBehaviour
     private static float progress=0;
     private void Awake()
     {
+        progress= gameManager.GetComponent<GameManager>().setProgr();
         newSlider.value = progress;
+        oldSlider.value = progress;
     }
     // Start is called before the first frame update
     // Update is called once per frame
