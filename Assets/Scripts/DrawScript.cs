@@ -47,10 +47,11 @@ public class DrawScript : MonoBehaviour
         if (adr.points.Count == 0)
         {
             var obj=GameObject.Find("StartDrawTip");
-            if(obj!= null)
+            if(obj!= null&&PlayerPrefs.HasKey("tipsOn"))
             {
                 obj.SetActive(false);
-                //adr.starttip4
+                adr.EndDrawTip.gameObject.SetActive(true);
+                
             }
             initPoint = transform;
             adr.add(initPoint);           
@@ -74,9 +75,9 @@ public class DrawScript : MonoBehaviour
         lr.AddComponent<EdgeCollider2D>();
         lr.GetComponent<EdgeCollider2D>().points = points.ToArray();
         var allChildren = drawPointsParent.GetComponentInChildren<Transform>();
-        if (adr.FormulaTip!=null)        
+        if (adr.FormulaTip!=null && PlayerPrefs.HasKey("tipsOn"))        
         {
-            //end tip 4
+            adr.EndDrawTip.gameObject.SetActive(false);
             adr.FormulaTip.SetActive(true);
         }
         foreach (Transform child in allChildren)

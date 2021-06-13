@@ -12,7 +12,8 @@ public class LineController : MonoBehaviour
     private int pointCount=0;
     public Transform inputParent;
     public GameObject FormulaTip = null;
-    //tip4
+    public GameObject EndDrawTip = null;
+   
 
     
     // Start is called before the first frame update

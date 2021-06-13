@@ -7,9 +7,10 @@ using UnityEngine.UI;
 public class MuteToggle : MonoBehaviour
 {
 	Toggle myToggle;
-	
 
-	// Start is called before the first frame update
+
+    // Start is called before the first frame update
+    
     void Start()
     {
 		myToggle = GetComponent<Toggle>();
@@ -17,7 +18,10 @@ public class MuteToggle : MonoBehaviour
 		{
 			myToggle.isOn = false;
 		}
-		PlayerPrefs.SetInt("tipsOn", 0);
+		if(name == "TipsCheckBox"&&!PlayerPrefs.HasKey("tipsOn"))
+        {
+			GetComponent<Toggle>().isOn = false;
+        }
     }
 
 	public void ToggleAudioOnValueChange(bool audioIn)
@@ -33,14 +37,15 @@ public class MuteToggle : MonoBehaviour
 	}
 	public void ToggleTips()
     {
-        if (PlayerPrefs.HasKey("tipsOn"))
-        {
-			PlayerPrefs.DeleteKey("tipsOn");
-			PlayerPrefs.Save();
-        }
-        else
+        
+        if (myToggle.isOn)
         {
 			PlayerPrefs.SetInt("tipsOn", 0);
+			PlayerPrefs.Save();
+		}
+        else
+        {
+			PlayerPrefs.DeleteKey("tipsOn");
 			PlayerPrefs.Save();
 		}
     }

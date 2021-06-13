@@ -19,7 +19,7 @@ public class ResizeField : MonoBehaviour
     {
         if ((botomSlider.value != 1 || leftSlider.value != 1) && sliderTip != null&&PlayerPrefs.HasKey("tipsOn"))
         {
-            if (!active)
+            if (!active && PlayerPrefs.HasKey("tipsOn"))
             {
                 sliderTip.SetActive(false);
                 fieldTip.SetActive(true);

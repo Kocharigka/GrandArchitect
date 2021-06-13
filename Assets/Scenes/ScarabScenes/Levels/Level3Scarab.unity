@@ -1174,13 +1174,14 @@ GameObject:
   - component: {fileID: 944342848}
   - component: {fileID: 944342850}
   - component: {fileID: 944342849}
+  - component: {fileID: 944342851}
   m_Layer: 5
   m_Name: TipImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &944342848
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1240,6 +1241,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 944342847}
   m_CullTransparentMesh: 1
+--- !u!114 &944342851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944342847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e658e0c782101c4d8519f7b392d4bc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1004415124
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,6 +1943,7 @@ MonoBehaviour:
   inAction: 0
   inputParent: {fileID: 1004415125}
   FormulaTip: {fileID: 162543414}
+  EndDrawTip: {fileID: 761991841}
 --- !u!1 &1965971286
 GameObject:
   m_ObjectHideFlags: 0
