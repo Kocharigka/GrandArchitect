@@ -36,5 +36,10 @@ public class CheckButtonScript : MonoBehaviour
         if (z > 0) return z;
         else return 0;
     }
+    public int getDiff()
+    {
+        float ans = float.Parse(answer.text.Replace("Ответ:", "").Replace("ед2", "").Trim());
+        return (int)Mathf.Abs(ans - square);
+    }
 
 }

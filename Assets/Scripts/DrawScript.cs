@@ -20,14 +20,24 @@ public class DrawScript : MonoBehaviour
     private void OnMouseDown()
     {             
         if (adr.inAction)
-        {
-            Debug.Log(adr.points.Count);
+        {           
             if (transform==initPoint && adr.points.Count >3)
             {
                 adr.add(transform);
                 adr.inAction = false;
                 endDraw();
-            } 
+            }
+
+            if (transform == adr.points[adr.points.Count-2])
+            {
+                if (adr.points.Count == 2)
+                {
+                    adr.points.Clear();
+                    initPoint = null;
+                    adr.inAction = false;
+                }
+                adr.del(transform);
+            }
             
             if(!adr.points.Contains(transform))           
             {               

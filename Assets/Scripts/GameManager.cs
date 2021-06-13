@@ -16,9 +16,55 @@ public class GameManager : MonoBehaviour
     private bool zero = false;
     public Button answerButton=null;
     public static Dictionary<string, float> progr=new Dictionary<string, float>();
+    public static int result=2000;
+    public static bool isRes = false;
+    public static string nick="<BLANK>";
+    private static int currency=0;
+    
+    public int getRes()
+    {
+        Debug.Log("getRes");
+        if (result!=2000)
+            return result;
+        else return 0;
+    }
+   
+    public string getNick()
+    {
+        return nick;
+    }
+    public void setNick(string nickname)
+    {
+        nick=nickname;
+    }
+    private void getCurrensy()
+    {
+        if (progress > 0.3)
+        {
+            currency = 100;
+        }
+        if (progress > 0.5)
+        {
+            currency = 250;
+        }
+        if (progress > 0.7)
+        {
+            currency = 400;
+        }
+        if (progress > 0.9)
+        {
+            currency = 600;
+        }
+    }
+    public int setCurrency()
+    {
+        return currency;
+    }
+
 
     private void Start()
     {
+        getCurrensy();
         if(spentPoints!=null)
         {
             currentPoints = int.Parse(spentPoints.text);
@@ -31,7 +77,8 @@ public class GameManager : MonoBehaviour
 
         maxPoints = currentPoints;
         if (progress < 0) progress = 0;
-        progressBar.value = progress;
+        if(progressBar!=null)
+            progressBar.value = progress;
      
 
     }
@@ -46,7 +93,11 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("b"))
         {
             currentBag = 100000;
-        }               
+        }
+        if (progress == 0)
+        {
+            progr.Clear();
+        }
     }
     public void spend()
     {
@@ -82,6 +133,11 @@ public class GameManager : MonoBehaviour
     {
         return answerButton.GetComponent<CheckButtonScript>().getAnswer() / 400;
     }
+    public void countDiff()
+    {
+        result-=answerButton.GetComponent<CheckButtonScript>().getDiff();
+    }
+    
 
 
    
@@ -106,12 +162,11 @@ public class GameManager : MonoBehaviour
     
     public void SaveProgr()
     {
+        countDiff();
        var sName=SceneManager.GetActiveScene().name;
         var persName = "persLVL" + sName[5];
         var sandName = "sandLVL" + sName[5];
-        Debug.Log(persName);
-        Debug.Log(sandName);
-        Debug.Log(sName[5]);
+        var diffName = "diffLVL" + sName[5];        
         if (progr.ContainsKey(persName))
         {
             progr.Remove(persName);
@@ -121,8 +176,12 @@ public class GameManager : MonoBehaviour
         {
             progr.Remove(sandName);
         }
-        progr.Add(sandName, maxPoints - currentPoints);
-        Debug.Log(progr.Count);
+        if (progr.ContainsKey(diffName))
+        {
+            progr.Remove(persName);
+        }
+        progr.Add(diffName, answerButton.GetComponent<CheckButtonScript>().getDiff());
+        progr.Add(sandName, maxPoints - currentPoints);       
     }
 
     public Dictionary<string,float> loadProgr()

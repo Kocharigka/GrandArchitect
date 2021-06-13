@@ -15,7 +15,7 @@ public class replayScript : MonoBehaviour
     {
         gm = gmobj.GetComponent<GameManager>();
         dict = gm.loadProgr();
-        var txt = gameObject.GetComponent<Text>();
+        var txt = gameObject.GetComponent<Text>();       
         if (dict.ContainsKey(gameObject.name))
         {
             if (gameObject.name[0] == 'p')
@@ -23,7 +23,7 @@ public class replayScript : MonoBehaviour
             else 
                 txt.text = dict[gameObject.name].ToString();
         }
-        else
+        else if(txt!=null)
         {
             txt.text = "";
         }
@@ -36,6 +36,7 @@ public class replayScript : MonoBehaviour
             gm.rmProgr(dict[pers.name], (int)dict[sand.name]);
             gm.rmKey(pers.name);
             gm.rmKey(sand.name);
+            gm.rmKey("diffLVL" + sand.name[sand.name.Length - 1]);
         }
 
     }

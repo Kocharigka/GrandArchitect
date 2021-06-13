@@ -22,18 +22,29 @@ public class LineController : MonoBehaviour
         points = new List<Transform>();        
         mousePos = new Vector3(0, 0, 0);
     }
-    
+    public void del(Transform point)
+    {
+        points.Remove(point);
+        pointCount -= 1;
+        points[pointCount] = point;
+        killChild();
+    }
     public void add(Transform point)
     {
         points.Add(null);
         points[pointCount]=point;
         pointCount += 1;
+        killChild();
+        
+    }    
+    private void killChild()
+    {
         var allChildren = inputParent.GetComponentInChildren<Transform>();
         foreach (Transform child in allChildren)
-        {           
-                Destroy(child.gameObject);
+        {
+            Destroy(child.gameObject);
         }
-    }    
+    }
     
     private void Update()
     {
