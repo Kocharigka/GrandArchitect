@@ -13,15 +13,13 @@ public class MuteToggle : MonoBehaviour
     
     void Start()
     {
+		
 		myToggle = GetComponent<Toggle>();
 		if (AudioListener.volume == 0)
 		{
 			myToggle.isOn = false;
 		}
-		if(name == "TipsCheckBox"&&!PlayerPrefs.HasKey("tipsOn"))
-        {
-			GetComponent<Toggle>().isOn = false;
-        }
+		
     }
 
 	public void ToggleAudioOnValueChange(bool audioIn)
@@ -35,18 +33,5 @@ public class MuteToggle : MonoBehaviour
 			AudioListener.volume = 0;
 		}
 	}
-	public void ToggleTips()
-    {
-        
-        if (myToggle.isOn)
-        {
-			PlayerPrefs.SetInt("tipsOn", 0);
-			PlayerPrefs.Save();
-		}
-        else
-        {
-			PlayerPrefs.DeleteKey("tipsOn");
-			PlayerPrefs.Save();
-		}
-    }
+	
 }

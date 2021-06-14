@@ -47,7 +47,7 @@ public class DrawScript : MonoBehaviour
         if (adr.points.Count == 0)
         {
             var obj=GameObject.Find("StartDrawTip");
-            if(obj!= null&&PlayerPrefs.HasKey("tipsOn"))
+            if(obj!= null&&GameObject.Find("GameManager").GetComponent<GameManager>().getToggle())
             {
                 obj.SetActive(false);
                 adr.EndDrawTip.gameObject.SetActive(true);
@@ -76,7 +76,7 @@ public class DrawScript : MonoBehaviour
         lr.AddComponent<EdgeCollider2D>();
         lr.GetComponent<EdgeCollider2D>().points = points.ToArray();
         var allChildren = drawPointsParent.GetComponentInChildren<Transform>();
-        if (adr.FormulaTip!=null && PlayerPrefs.HasKey("tipsOn"))        
+        if (adr.FormulaTip!=null && GameObject.Find("GameManager").GetComponent<GameManager>().getToggle())        
         {
             adr.EndDrawTip.gameObject.SetActive(false);
             adr.FormulaTip.SetActive(true);

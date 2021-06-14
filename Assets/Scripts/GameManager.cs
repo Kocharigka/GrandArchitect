@@ -20,7 +20,15 @@ public class GameManager : MonoBehaviour
     public static bool isRes = false;
     public static string nick="<BLANK>";
     private static int currency=0;
-    
+    public static bool toggleOn = true;
+    public void toggle(bool t)
+    {
+        toggleOn = t;
+    }
+    public bool getToggle()
+    {
+        return toggleOn;
+    }
     
     public int getRes()
     {

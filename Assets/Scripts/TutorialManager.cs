@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TutorialManager : MonoBehaviour
 {
-    public static int currentBag = 5000;
+    public int currentBag = 5000;
     public float progress = 0;
     public Text bagText;
     public Slider progressBar;

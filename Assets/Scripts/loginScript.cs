@@ -98,9 +98,10 @@ public class loginScript : MonoBehaviour
         nickInput.text = "";
         nameInput.text = "";
         groupInput.text = "";
-        nick = "";
-        name = "";
-        group = "";
+        nick = "<BLANK>";
+        gm.setNick(nick);
+        name = "<BLANK>";
+        group = "<BLANK>";
 
         nickInput.gameObject.SetActive(true);
         nameInput.gameObject.SetActive(true);

@@ -6,14 +6,9 @@ public class TIpsManager : MonoBehaviour
 {  
     void Start()
     {
-        if(PlayerPrefs.HasKey("tipsOn"))
-        {
-            gameObject.SetActive(true);
-        }
-        else
-        {
+        var gm = GameObject.Find("GameManager").GetComponent<GameManager>();
+        if (!gm.getToggle())
             gameObject.SetActive(false);
-        }
     }    
     
 }

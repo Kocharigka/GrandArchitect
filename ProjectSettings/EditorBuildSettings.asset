@@ -42,21 +42,12 @@ EditorBuildSettings:
     path: Assets/Scenes/ScarabScenes/StoryScenes/Formula.unity
     guid: ef6f6e2941a2d44409345b1a0e5ce82c
   - enabled: 1
-    path: Assets/Scenes/ScarabScenes/LoseSceneScarab.unity
-    guid: f5ca4078b8e0276458fbf5d6f4089144
+    path: Assets/Scenes/leaderboard.unity
+    guid: 94fce33570862ea46830cb951d16b797
   - enabled: 1
     path: Assets/Scenes/ScarabScenes/WinSceneScarab.unity
     guid: 4d3282f141532c84896007c0ccc086a6
   - enabled: 1
     path: Assets/Scenes/settings.unity
     guid: e4719d0a63891aa4490e30cd84e6e8dc
-  - enabled: 1
-    path: Assets/Scenes/leaderboard.unity
-    guid: 94fce33570862ea46830cb951d16b797
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   m_configObjects: {}
