@@ -51,7 +51,7 @@ public class loginScript : MonoBehaviour
             if (nick != nickInput.text)
             {
                 nick = nickInput.text;
-                gm.rmProgr(gm.setProgr(),0);
+                gm.dropProgr();
             }
         }
         else

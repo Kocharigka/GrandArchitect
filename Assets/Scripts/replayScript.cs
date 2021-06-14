@@ -32,10 +32,10 @@ public class replayScript : MonoBehaviour
     public void replay()
     {
         if (pers.text != ""&&sand.text!="")
-        {            
-            gm.rmProgr(dict[pers.name], (int)dict[sand.name]);
-            gm.rmKey(pers.name);
-            gm.rmKey(sand.name);
+        {           
+            gm.rmProgr(dict[pers.name]/100, (int)dict[sand.name],(int)dict["diffLVL" + sand.name[sand.name.Length - 1]]);          
+            gm.rmKey(pers.name);           
+            gm.rmKey(sand.name);           
             gm.rmKey("diffLVL" + sand.name[sand.name.Length - 1]);
         }
 

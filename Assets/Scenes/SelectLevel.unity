@@ -502,8 +502,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 34.7, y: -5.0000153}
-  m_SizeDelta: {x: 297.5872, y: 32.7357}
+  m_AnchoredPosition: {x: 27.988585, y: -5.0000153}
+  m_SizeDelta: {x: 311.01, y: 32.7357}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133864618
 MonoBehaviour:
@@ -1396,6 +1396,7 @@ MonoBehaviour:
   button2: {fileID: 270819946}
   button3: {fileID: 854750464}
   button4: {fileID: 1407287174}
+  final: {fileID: 0}
 --- !u!1 &748566521
 GameObject:
   m_ObjectHideFlags: 0
@@ -1460,7 +1461,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 0.7607843}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -1474,7 +1475,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 748566524}
   m_OnClick:
     m_PersistentCalls:
@@ -2279,8 +2280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ee64ec1151949438dd73a18de6cb12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gmobj: {fileID: 1403887713}
-  currency: {fileID: 1082130776}
 --- !u!1 &1115462770
 GameObject:
   m_ObjectHideFlags: 0

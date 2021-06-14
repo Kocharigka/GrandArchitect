@@ -13,6 +13,7 @@ public class LineController : MonoBehaviour
     public Transform inputParent;
     public GameObject FormulaTip = null;
     public GameObject EndDrawTip = null;
+    public GameObject spawnButton = null;
    
 
     

@@ -15,7 +15,7 @@ public class HIde : MonoBehaviour
     }
     public void showImage()
     {
-        if (toShowImage != null && PlayerPrefs.HasKey("tipsOn"))
+        if ((toShowImage != null && PlayerPrefs.HasKey("tipsOn"))||name=="testing")
             toShowImage.SetActive(true);
     }
 }

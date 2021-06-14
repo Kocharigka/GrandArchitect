@@ -1027,6 +1027,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7779187846433991249, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779187846433991249, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1121455294}
@@ -1146,6 +1150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &853857795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7779187846433991260, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
+  m_PrefabInstance: {fileID: 853857790}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &910457590 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 228023581894084444, guid: da3381794a0eaf146ab08022e55b9981, type: 3}
@@ -1944,6 +1953,7 @@ MonoBehaviour:
   inputParent: {fileID: 1004415125}
   FormulaTip: {fileID: 162543414}
   EndDrawTip: {fileID: 761991841}
+  spawnButton: {fileID: 853857795}
 --- !u!1 &1965971286
 GameObject:
   m_ObjectHideFlags: 0

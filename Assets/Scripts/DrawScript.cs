@@ -63,6 +63,7 @@ public class DrawScript : MonoBehaviour
     
     public void endDraw()
     {
+        adr.spawnButton.GetComponent<Button>().interactable = true;
         var points = new List<Vector2>();
         foreach (var point in adr.points)
         {

@@ -11,23 +11,46 @@ public class LevelProgression : MonoBehaviour
     public Button button2;
     public Button button3;
     public Button button4;
+    public Button final;
+    private static bool lvl1=false;
+    private static bool lvl2 = false;
+    private static bool lvl3 = false;
+    private static bool _final = false;
+
 
     // Start is called before the first frame update
     void Start()
     {
         gm = gmobj.GetComponent<GameManager>();
         dict = gm.loadProgr();
-        if(dict.ContainsKey("persLVL1"))
+        if (!gm.IsRes())
+        {
+            lvl1 = false;
+            lvl2 = false;
+            lvl3 = false;
+            _final = false;
+        }
+        if(dict.ContainsKey("persLVL1")||lvl1)
         {
             button2.interactable = true;
+            lvl1 = true;
+
         }
-        if (dict.ContainsKey("persLVL2"))
+        if (dict.ContainsKey("persLVL2") || lvl2)
         {
             button3.interactable = true;
+            lvl2 = true;
         }
-        if (dict.ContainsKey("persLVL3"))
+        if (dict.ContainsKey("persLVL3") || lvl3)
         {
             button4.interactable = true;
+            lvl3 = true;
+        }
+        if (dict.ContainsKey("persLVL4") || _final)
+        {
+            button4.interactable = true;
+            lvl3 = true;
+            _final = true;
         }
 
     }

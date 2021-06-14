@@ -16,17 +16,19 @@ public class GameManager : MonoBehaviour
     private bool zero = false;
     public Button answerButton=null;
     public static Dictionary<string, float> progr=new Dictionary<string, float>();
-    public static int result=2000;
+    public static int result=0;
     public static bool isRes = false;
     public static string nick="<BLANK>";
     private static int currency=0;
     
+    
     public int getRes()
     {
-        Debug.Log("getRes");
-        if (result!=2000)
-            return result;
-        else return 0;
+        return result;
+    }
+    public bool IsRes()
+    {
+        return isRes;
     }
    
     public string getNick()
@@ -60,7 +62,13 @@ public class GameManager : MonoBehaviour
     {
         return currency;
     }
-
+    public void dropProgr()
+    {
+        progress = 0;
+        progr.Clear();
+        result = 0;
+        isRes = false;
+    }
 
     private void Start()
     {
@@ -93,11 +101,8 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown("b"))
         {
             currentBag = 100000;
-        }
-        if (progress == 0)
-        {
-            progr.Clear();
-        }
+        }       
+      //  Debug.Log(progr.Count);
     }
     public void spend()
     {
@@ -150,10 +155,11 @@ public class GameManager : MonoBehaviour
     {
         progress -= getProgr();
     }
-    public void rmProgr(float progr,int sand)
+    public void rmProgr(float progr,int sand,int res)
     {
         progress -= progr;
         currentBag += sand;
+        result -= 500-res;        
     }
     public void rmKey(string key)
     {
@@ -162,7 +168,9 @@ public class GameManager : MonoBehaviour
     
     public void SaveProgr()
     {
+        result += 500;
         countDiff();
+        isRes = true;
        var sName=SceneManager.GetActiveScene().name;
         var persName = "persLVL" + sName[5];
         var sandName = "sandLVL" + sName[5];
@@ -178,7 +186,7 @@ public class GameManager : MonoBehaviour
         }
         if (progr.ContainsKey(diffName))
         {
-            progr.Remove(persName);
+            progr.Remove(diffName);
         }
         progr.Add(diffName, answerButton.GetComponent<CheckButtonScript>().getDiff());
         progr.Add(sandName, maxPoints - currentPoints);       

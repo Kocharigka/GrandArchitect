@@ -7,7 +7,7 @@ public class Filling : MonoBehaviour
 {
     public GameObject gmobj;
     private GameManager gm;
-    float target = .9f;
+    public float target = .9f;
     float speed = 0.2f;
     public Slider silder;
     public GameObject fill;

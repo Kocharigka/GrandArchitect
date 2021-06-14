@@ -341,6 +341,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7779187846433991249, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779187846433991249, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1853266795}
@@ -362,7 +366,7 @@ PrefabInstance:
       objectReference: {fileID: 2094827615}
     - target: {fileID: 7779187846553081443, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
       propertyPath: square
-      value: 900
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7779187846553081443, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
       propertyPath: setPoints
@@ -422,6 +426,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
+--- !u!1 &153651220 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7779187846433991260, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
+  m_PrefabInstance: {fileID: 153651219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &202450697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1286012590483235734, guid: fda3804decb1d7f458ee2f732ccb5268, type: 3}
@@ -1368,6 +1377,7 @@ MonoBehaviour:
   inputParent: {fileID: 789239450}
   FormulaTip: {fileID: 0}
   EndDrawTip: {fileID: 0}
+  spawnButton: {fileID: 153651220}
 --- !u!1001 &1676647072
 PrefabInstance:
   m_ObjectHideFlags: 0
