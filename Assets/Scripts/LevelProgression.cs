@@ -48,13 +48,24 @@ public class LevelProgression : MonoBehaviour
         }
         if (dict.ContainsKey("persLVL4") || _final)
         {
-            button4.interactable = true;
+            final.interactable = true;
             lvl3 = true;
             _final = true;
         }
 
     }
+    private void Update()
+    {
+        if (Input.GetKeyDown("l"))
+        {
+            gm.setRes(true);
+            lvl1 = true;
+            lvl2 = true;
+            lvl3 = true;
+            _final = true;
+        }
+    }
 
     // Update is called once per frame
-    
+
 }

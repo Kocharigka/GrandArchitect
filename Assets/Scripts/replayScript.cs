@@ -19,7 +19,7 @@ public class replayScript : MonoBehaviour
         if (dict.ContainsKey(gameObject.name))
         {
             if (gameObject.name[0] == 'p')
-                txt.text = dict[gameObject.name].ToString() + "%";
+                txt.text = (dict[gameObject.name]*4).ToString() + "%";
             else 
                 txt.text = dict[gameObject.name].ToString();
         }

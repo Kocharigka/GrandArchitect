@@ -14,7 +14,7 @@ public class SkipButtonSkript : MonoBehaviour
     }
     private void Update()
     {
-        if (slider.value >= slider.GetComponent<Filling>().target)
+        if (slider.value >= slider.GetComponent<Filling>().target||slider.value==1)
             gameObject.SetActive(false);
     }
 

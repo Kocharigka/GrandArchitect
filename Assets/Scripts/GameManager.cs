@@ -38,6 +38,10 @@ public class GameManager : MonoBehaviour
     {
         return isRes;
     }
+    public void setRes(bool res)
+    {
+        isRes = res;
+    }
    
     public string getNick()
     {
