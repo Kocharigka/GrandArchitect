@@ -128,6 +128,7 @@ public class GameManager : MonoBehaviour
     public void refill()
     {
         currentBag += maxPoints - currentPoints;
+        del();
     }
     public void newProgress()
     {
@@ -171,15 +172,27 @@ public class GameManager : MonoBehaviour
         result += 500;
         countDiff();
         isRes = true;
-       var sName=SceneManager.GetActiveScene().name;
+        var sName = SceneManager.GetActiveScene().name;
         var persName = "persLVL" + sName[5];
         var sandName = "sandLVL" + sName[5];
-        var diffName = "diffLVL" + sName[5];        
+        var diffName = "diffLVL" + sName[5];
+        del();
+
+        progr.Add(persName,Mathf.Round(getProgr()*100));
+       
+        progr.Add(diffName, answerButton.GetComponent<CheckButtonScript>().getDiff());
+        progr.Add(sandName, maxPoints - currentPoints);       
+    }
+    public void del()
+    {
+        var sName = SceneManager.GetActiveScene().name;
+        var persName = "persLVL" + sName[5];
+        var sandName = "sandLVL" + sName[5];
+        var diffName = "diffLVL" + sName[5];
         if (progr.ContainsKey(persName))
         {
             progr.Remove(persName);
         }
-        progr.Add(persName,Mathf.Round(getProgr()*100));
         if (progr.ContainsKey(sandName))
         {
             progr.Remove(sandName);
@@ -188,8 +201,6 @@ public class GameManager : MonoBehaviour
         {
             progr.Remove(diffName);
         }
-        progr.Add(diffName, answerButton.GetComponent<CheckButtonScript>().getDiff());
-        progr.Add(sandName, maxPoints - currentPoints);       
     }
 
     public Dictionary<string,float> loadProgr()
