@@ -518,6 +518,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: LoadLevelByName, Assembly-CSharp
       objectReference: {fileID: 0}
+    - target: {fileID: 7779187844797333274, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
+      propertyPath: m_Text
+      value: /5000
+      objectReference: {fileID: 0}
     - target: {fileID: 7779187845361507684, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -625,6 +629,14 @@ PrefabInstance:
     - target: {fileID: 7779187845999301664, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: Tutorial
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779187845999301665, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 7779187845999301665, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 47
       objectReference: {fileID: 0}
     - target: {fileID: 7779187846011545574, guid: 1bbbacae01da7e24bb14493dceac8743, type: 3}
       propertyPath: m_AnchorMax.x
